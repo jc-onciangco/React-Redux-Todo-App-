@@ -1,38 +1,206 @@
+.App * {
+    list-style: none;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+:root {
+    --fontSize1 : 1rem;
+    --fontSize09: 0.9rem;
+    --fontSize08: 0.7rem;
+}
+
 .App {
-  text-align: center;
+    height: 100vh;
+    width: 100%;
+    background-color: white;
+    padding-top: 50px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.todo-app {
+    width: 80%;
+    margin: auto;
+    background-color: #FFC0CB;
+    box-shadow: 0 6px 4px rgba(0,0,0,0.3);
+    border-radius: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.title {
+    padding: 18px 0 18px 10px;
+    font-size: 2rem;
+    text-align: center;
+    background-color: #A97878;
+    color: white;
+    border-radius: 10px 10px  0 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.side-features {
+    padding: 8px 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.add-todo {
+    text-align: center;
+    padding: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.add-todo
+> input {
+    height: 2rem;
+    width: 100%;
+    outline: none;
+    padding-left: 5px;
+    border: none;
+    font-size: var(--fontSize1);
+    border-radius: 3px;
 }
+
+.todo-body {
+    width: 100%;
+    padding: 20px;
+}
+
+/* .todo:nth-child(even) {
+    background-color: #FFFADE;
+}
+.todo:nth-child(odd) {
+    background-color: #DAEFFC;
+} */
+
+.todo {
+    border-radius: 5px;
+    background-color: #FFEAED;
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    margin-bottom: 15px;
+    box-shadow: 2px 2px 3px rgba(0,0,0,0.3),
+                -2px -2px 3px rgba(255,255,255,0.5);
+}
+
+.finish-todo {
+    border-radius: 5px 0 0 5px;
+    background-color: white;
+    height: 100%;
+    width: 40px;
+
+    display: grid;
+    place-items: center;
+}
+
+.finish-todo
+> input {
+    height: 50%;
+    width: 50%;
+}
+
+.todo-content {
+    flex: 1;
+}
+
+.content {
+    height: 100%;
+    width: 100%;
+}
+
+.content p {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    font-size: var(--fontSize09);
+    padding-left: 5px;
+}
+
+.delete-wrapper {
+    border-radius: 0 5px 5px 0;
+    width: 80px;
+    display: grid;
+    place-items: center;
+    background-color: #F06997;
+    color: white;
+    cursor: pointer;
+}
+
+.delete-wrapper
+span {
+    font-size: var(--fontSize08);
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+.todo-edit {
+    height: 100%;
+    width: 100%;
+}
+
+.todo-edit
+> input {
+    height: 100%;
+    width: 100%;
+    padding-left: 5px;
+    outline: none;
+    border: none;
+    font-size: var(--fontSize09);
+}
+
+/* SIDE FEATURES */
+.side-features {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filter-todos {
+    display: flex;
+}
+
+.form-field {
+    display: flex;
+    align-items: center;
+    color: white;
+    margin-right: 10px;
+    border-radius: 6px;
+    box-shadow: 2px 2px 3px rgba(0,0,0,0.3),
+                -2px -2px 3px rgba(255,255,255,0.5);
+}
+
+.radio-button {
+    width: 30px;
+    height: 50%;
+}
+
+.radio-label {
+    padding: 10px;
+    padding-left: 3px;
+    font-size: 0.7rem;
+}
+
+.delete-complete-all, .delete-all {
+    display: flex;
+}
+
+.delete-button {
+    cursor: pointer;
+    color: white;
+    font-size: 0.7rem;
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 6px;
+    box-shadow: 2px 2px 3px rgba(0,0,0,0.3),
+                -2px -2px 3px rgba(255,255,255,0.5);
+}
+
+.finished-all-uncomplete {
+    background-color: #DAEFFC;
+    color: #111;
+}
+
+.reset-todos {
+    background-color: #FFFADE;
+    color: #111;
+}
+
+.delete-completed, .delete-all-todo {
+    background-color: #F06997;
+}
+
