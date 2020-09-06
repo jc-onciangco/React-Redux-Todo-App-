@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <div className="todo-app">
-        <h1 className="title">REDUX - REACT TODO</h1>
+        <h1 className="title">R-R TODO</h1>
         <AddTodo />
         <SideFeatures />
         <TodoBody />
